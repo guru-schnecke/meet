@@ -109,13 +109,13 @@ module.exports.getCalandarEvents = async (event) => {
   );
   // Get authorization code from the URL query
   const access_token = `${event.pathParameters.access_token}`;
-
+  //@careerfoundry.com
   oAuth2Client.setCredentials({ access_token });
 
   return new Promise((resolve, reject) => {
     calendar.events.list(
       {
-        calendarId: calendar_id,
+        calendarId: calendar_id.trim(),
         auth: oAuth2Client,
         timeMin: new Date().toISOString(),
         maxResults: event.pathParameters.max_results || 2,
