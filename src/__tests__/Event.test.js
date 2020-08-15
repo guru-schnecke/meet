@@ -64,4 +64,13 @@ describe("<Event /> component", () => {
     EventWrapper.find(".detailsBtn").simulate("click");
     expect(EventWrapper.find(".EventDetail")).toHaveLength(0);
   });
+
+  test("show extra info with teh following details", () => {
+    EventWrapper.find(".detailsBtn").simulate("click");
+
+    expect(EventWrapper.find(".event__summary")).toHaveLength(1);
+    expect(EventWrapper.find(".event__location")).toHaveLength(1);
+    expect(EventWrapper.find(".event__end")).toHaveLength(1);
+    expect(EventWrapper.find(".event__str")).toHaveLength(1);
+  });
 });

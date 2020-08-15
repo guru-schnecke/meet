@@ -24,7 +24,7 @@ class Event extends React.Component {
             )}
           </div>
         </div>
-        <div>
+        <div className="event__summary">
           {this.props.event.summary}
           <div className="event__location">{this.props.event.location}</div>
           <button className="detailsBtn" onClick={this.handleClick}>
