@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { mockData } from "../../utilz/mock-data";
-import { extractLocations } from "../../utilz/api";
+// import { mockData } from "../../utilz/mock-data";
+// import { extractLocations } from "../../utilz/api";
 
 class CitySearch extends Component {
   state = {

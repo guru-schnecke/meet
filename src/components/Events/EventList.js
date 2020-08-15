@@ -1,20 +1,20 @@
 import React, { Component } from "react";
 import Event from "./Event";
+import { mockData } from "../../utilz/mock-data";
+// import { extractLocations } from "../../utilz/api";
 
 class EventList extends Component {
   state = {
-    events: [],
+    events: mockData,
   };
   render() {
     let { events } = this.state;
     return (
-      <ul className="EventList">
+      <div className="EventList">
         {events.map((event, id) => (
-          <li key={event.id}>
-            <Event event={event} />
-          </li>
+          <Event key={event.id} event={event} />
         ))}
-      </ul>
+      </div>
     );
   }
 }
