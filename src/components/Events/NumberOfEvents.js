@@ -2,14 +2,20 @@ import React from "react";
 
 class NumberOfEvents extends React.Component {
   state = {
-    length: this.props.length,
+    length: 32,
   };
 
   handleChange = (event) => {
-    this.setState({ length: event.target.value });
+    let { value } = event.target;
+    this.setState({ length: +value });
+    if (value !== "") {
+      this.props.updateNumberOfEvents(+value);
+    }
   };
+
   render() {
     let { length } = this.state;
+    // console.log(this.state.length);
     return (
       <div className="NumberOfEvents">
         Show{" "}

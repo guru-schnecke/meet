@@ -1,6 +1,6 @@
 .Event {
   border: 1px solid #000;
-  padding: 10px;
+  /* padding: 10px; */
   list-style: none;
   margin-bottom: 10px;
   border-radius: 10px;
@@ -11,6 +11,8 @@
 .Event .dates {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .Event .detailsBtn {
