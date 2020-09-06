@@ -12,7 +12,7 @@ class Event extends React.Component {
   };
   render() {
     return (
-      <Card className="Event">
+      <Card className="Event" id={this.props.id}>
         <Card.Body>
           <div className="dates">
             <div className="event__str">

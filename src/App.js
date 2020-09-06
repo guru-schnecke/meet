@@ -63,18 +63,16 @@ class App extends React.Component {
 
   render() {
     let { numberOfEvents, locations, events, filtered } = this.state;
-    console.log(this.state);
+
     return (
-      <div className="App">
-        <Container>
-          <CitySearch updateEvents={this.updateEvents} locations={locations} />
-          <NumberOfEvents
-            updateNumberOfEvents={this.updateNumberOfEvents}
-            length={numberOfEvents}
-          />
-          <EventList events={filtered.length ? filtered : events} />
-        </Container>
-      </div>
+      <Container>
+        <CitySearch updateEvents={this.updateEvents} locations={locations} />
+        <NumberOfEvents
+          updateNumberOfEvents={this.updateNumberOfEvents}
+          length={numberOfEvents}
+        />
+        <EventList events={filtered.length ? filtered : events} />
+      </Container>
     );
   }
 }
