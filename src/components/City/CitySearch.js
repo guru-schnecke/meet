@@ -40,7 +40,7 @@ class CitySearch extends Component {
   render() {
     let { value } = this.state;
     return (
-      <div className="CitySearch">
+      <div className="CitySearch mb-3">
         <Form.Control
           type="text"
           className="city"

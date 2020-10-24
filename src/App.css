@@ -1,3 +1,12 @@
 .display-none {
   display: none;
 }
+
+.suggestions{
+  padding: 0;
+  list-style: none;
+}
+.suggestions .suggested{
+    list-style: none;
+    background-color: aliceblue;
+}
